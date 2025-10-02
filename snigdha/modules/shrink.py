@@ -137,26 +137,8 @@ async def help_callback(client, callback_query):
     user_id = callback_query.from_user.id
     buttons = [[InlineKeyboardButton("Back", callback_data="$backStartmsg")]]
     keyboard = InlineKeyboardMarkup(buttons)
-    help_text = (
-        "**📝 Bot Commands Overview:**\n\n"
-        "1. **/add userID** - Add user to premium (Owner only)\n"
-        "2. **/rem userID** - Remove user from premium (Owner only)\n"
-        "3. **/transfer userID** - Transfer premium to another user (Premium only)\n"
-        "4. **/lock** - Lock channel from extraction (Owner only)\n"
-        "5. **/dl link** - Download videos\n"
-        "6. **/adl link** - Download audio\n"
-        "7. **/login** - Log in for private channel access\n"
-        "8. **/batch** - Bulk extraction for posts (After login)\n"
-        "9. **/logout** - Log out from the bot\n"
-        "10. **/stats** - Get bot stats\n"
-        "11. **/plan** - Check premium plans\n"
-        "12. **/speedtest** - Test server speed\n"
-        "13. **/terms** - Terms and conditions\n"
-        "14. **/cancel** - Cancel ongoing batch process\n"
-        "15. **/myplan** - Get details about your plans\n"
-        "16. **/session** - Generate Pyrogram V2 session\n"
-        "17. **/settings** - Configure settings (chat ID, rename, caption, etc.)\n"
-    )
+    help_text = "🥱🥱"
+        
     await callback_query.message.edit_text(
         help_text,
         reply_markup=keyboard,
@@ -171,8 +153,8 @@ async def back_callback(client, callback_query):
     fullname = f"{user.first_name} {user.last_name}" if user.last_name else user.first_name
     buttons = [
         [
-            InlineKeyboardButton("Update Channel", url="https://t.me/TheSmartDev"),
-            InlineKeyboardButton("Source Repo", url="https://github.com/abirxdhack/RestrictedContentDL")
+            InlineKeyboardButton("Update Channel", url="https://t.me/Durov"),
+            InlineKeyboardButton("Source Repo", url="https://github.com")
         ],
         [
             InlineKeyboardButton("Help Menu", b"$starthelpmsg"),
@@ -185,7 +167,7 @@ async def back_callback(client, callback_query):
         "**━━━━━━━━━━━━━━━━━━━━━━**\n"
         "**RestrictedDL ⚙️:** The ultimate toolkit on Telegram, offering Downloading Any Type Of Resticted Content From Both Public & Private Source!\n"
         "**━━━━━━━━━━━━━━━━━━━━━━**\n"
-        "**Don't Forget To [Join Here](https://t.me/TheSmartDev) For Updates!**",
+        "**Don't Forget To [Join Here](https://t.me/Durov) For Updates!**",
         reply_markup=keyboard,
         parse_mode=ParseMode.MARKDOWN,
         disable_web_page_preview=True
